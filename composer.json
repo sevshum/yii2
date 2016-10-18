@@ -1,0 +1,61 @@
+{
+    "name": "yiisoft/yii2-app-basic",
+    "description": "Yii 2 Basic Application Template",
+    "keywords": ["yii2", "framework", "basic", "application template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-jui": "*",
+        "yiisoft/yii2-swiftmailer": "*",
+        "kartik-v/yii2-widgets": "*",
+        "maxlapko/yii2-image-processor": "*",
+        "vova07/yii2-imperavi-widget": "*",
+        "cebe/yii2-gravatar": "*",
+        "creocoder/yii2-nested-sets": "*",
+        "yiisoft/yii2-authclient": "*"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*"
+    },
+    "suggest": {
+        "codeception/codeception": "Codeception, 1.8.*@dev is currently works well with Yii.",
+        "codeception/specify": "BDD style code blocks for PHPUnit and Codeception",
+        "codeception/verify": "BDD Assertions for PHPUnit and Codeception"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "app\\modules\\core\\components\\Installer::run",
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [{
+                "app/runtime": "0777",
+                "web/assets": "0777",
+                "web/files/img": "0777",
+                "yii": "0755"
+            }]
+        },
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
