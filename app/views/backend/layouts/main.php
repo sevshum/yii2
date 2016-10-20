@@ -62,7 +62,7 @@ BackendAsset::register($this);
                             'items' => [
                                 [
                                     'label' => '<i class="fa fa-gear fa-fw"></i>' . Yii::t('app', 'Profile'), 
-                                    'url' => ['/user/users/update', 'id' => $user->id],
+                                    'url' => ['/admin/users/update', 'id' => $user->id],
                                 ],
                                 '<li class="divider"></li>',
                                 [
@@ -140,17 +140,7 @@ BackendAsset::register($this);
                             'url' => '#',
                             'items' => [
                                 ['label' => Yii::t('app', 'Users'), 'url' => ['/user/users/admin']],
-                                ['label' => Yii::t('app', 'Pages'), 'url' => ['/page/pages/admin']],
-                                ['label' => Yii::t('app', 'Blog'), 'url' => ['/blog/posts/admin']],
-                                ['label' => Yii::t('app', 'Galleries'), 'url' => ['/gallery/galleries/admin']],
-                                ['label' => Yii::t('app', 'Categories'), 'url' => ['/category/categories/admin']],
                                 ['label' => Yii::t('app', 'Menus'), 'url' => ['/menu/menus/admin']],
-                                ['label' => Yii::t('app', 'Content blocks'), 'url' => ['/contentblock/contents/admin']],
-                                ['label' => Yii::t('app', 'Glossary'), 'url' => ['/glossary/terms/admin']],
-                                [
-                                    'label' => Yii::t('app', 'Comments ({count})', ['count' => Yii::$app->getModule('comment')->getNewCount()]), 
-                                    'url' => ['/comment/comments/admin']
-                                ],
                             ]
                         ],
                         [
@@ -160,7 +150,6 @@ BackendAsset::register($this);
                             'items' => [
                                 ['label' => Yii::t('app', 'Admins'), 'url' => ['/admin/users/admin']],
                                 ['label' => Yii::t('app', 'Languages'), 'url' => ['/language/languages/admin']],
-                                ['label' => Yii::t('app', 'Translations'), 'url' => ['/translate/languages/admin']],
                                 ['label' => Yii::t('app', 'Mail templates'), 'url' => ['/mail/templates/admin']],
                                 ['label' => Yii::t('app', 'Settings'), 'url' => ['/settings/items/admin']],
                             ]

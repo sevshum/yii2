@@ -24,7 +24,7 @@
         "vova07/yii2-imperavi-widget": "*",
         "cebe/yii2-gravatar": "*",
         "creocoder/yii2-nested-sets": "*",
-        "yiisoft/yii2-authclient": "*"
+        "yiisoft/yii2-authclient": "2.0.6"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",

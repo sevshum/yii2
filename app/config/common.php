@@ -12,29 +12,9 @@ return [
             'class' => 'app\modules\user\Module',
         ],
         'language' => ['class' => 'app\modules\language\Module'],
-        'page' => ['class' => 'app\modules\page\Module'],
-        'gallery' => ['class' => 'app\modules\gallery\Module'],
-        'mail' => ['class' => 'app\modules\mail\Module'],
-        'translate' => ['class' => 'app\modules\translate\Module'],
-        'blog' => ['class' => 'app\modules\blog\Module'],
-        'category' => ['class' => 'app\modules\category\Module'],
-        'menu' => ['class' => 'app\modules\menu\Module'],
-        'contentblock' => ['class' => 'app\modules\contentblock\Module'],
-        'comment' => ['class' => 'app\modules\comment\Module'],
         'settings' => ['class' => 'app\modules\settings\Module'],
-        'glossary' => ['class' => 'app\modules\glossary\Module'],
-
-        'image' => ['class' => 'app\modules\image\Module'],
-        'attachment' => ['class' => 'app\modules\attachment\Module'],
-        'formbuilder' => ['class' => 'app\modules\formbuilder\Module'],
-
-        'search' => [
-            'class' => 'app\modules\search\Module',
-            'searchModules' => [
-                'page' => 'app\modules\page\models\Page',
-                'blog' => 'app\modules\blog\models\Post'
-            ]
-        ],
+        'menu' => ['class' => 'app\modules\menu\Module'],
+        'mail' => ['class' => 'app\modules\mail\Module'],
     ],
     'components' => [
         'cache' => [
